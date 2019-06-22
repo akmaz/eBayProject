@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="14205" started-at="2019-06-22T21:35:27Z" finished-at="2019-06-22T21:35:42Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="14205" started-at="2019-06-22T21:35:27Z" finished-at="2019-06-22T21:35:42Z">
+      <class name="tests.CartPageTest">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:tests.CartPageTest@28d25987]" name="startBrowser" is-config="true" duration-ms="5562" started-at="2019-06-22T21:35:27Z" finished-at="2019-06-22T21:35:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method status="PASS" signature="openAndAssertCartPage()[pri:0, instance:tests.CartPageTest@28d25987]" name="openAndAssertCartPage" duration-ms="8605" started-at="2019-06-22T21:35:33Z" finished-at="2019-06-22T21:35:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openAndAssertCartPage -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.CartPageTest@28d25987]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2019-06-22T21:35:42Z" finished-at="2019-06-22T21:35:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.CartPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
