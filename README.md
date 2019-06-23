@@ -32,7 +32,7 @@ Sample screenshot of the Excel file:
 
 Developed page objects:
 * Header Component - the header of the eBay page
-* Footer Component - the footer for subpages such as Cart Page
+* Footer Component - the footer (version for subpages such as Cart Page)
 * Cart Page - eBay subpage that displays your cart
 * Item Listed Component - small boxes displaying individual items on Search page
 
@@ -44,7 +44,7 @@ Partly developed page objects that need finishig:
 * Item In Cart Component - an item box on the Cart page
 
 Ideas for future development:
-* finishing off Main Page, Search Page, Item Page
+* finishing off Main Page, Search Page, Item Page, Item In Cart Component
 
 ### Acknowledgments
 Any problems that I stumbled upon while working on the project were solved thanks to:
