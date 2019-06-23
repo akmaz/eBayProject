@@ -31,16 +31,17 @@ Sample screenshot of the Excel file:
 ![alt text](eBayProject/src/test/resources/images/excel.jpg)
 
 Developed page objects:
-* HeaderComponent - the header of the eBay page
-* FooterComponent - the footer for subpages such as Cart Page
+* Header Component - the header of the eBay page
+* Footer Component - the footer for subpages such as Cart Page
 * Cart Page - eBay subpage that displays your cart
-* ItemListedComponent - small boxes displaying individual items on Search page
+* Item Listed Component - small boxes displaying individual items on Search page
 
 
 Partly developed page objects that need finishig:
 * Main Page - main eBay page
 * Search Page - search page on eBay
 * Item Page - subpage displaying an individual item to buy
+* Item In Cart Component - an item box on the Cart page
 
 Ideas for future development:
 * finishing off Main Page, Search Page, Item Page
