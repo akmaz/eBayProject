@@ -6,7 +6,7 @@ To run the project, you will need:
 
 * JDK 8 - you can download [here](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 * Eclipse - you can download [here](https://www.eclipse.org/downloads/packages/).
-* Maven integration for Eclipse.
+* Maven - you can download 'Maven integration for Eclipse' from Eclipse Marketplace.
 * TestNG - you can download 'TestNG for Eclipse' plug-in from Eclipse Marketplace.
 * Chrome Driver - version used: Chrome 75. Driver is already added to the project in the src/test/resources/drivers folder.
 
@@ -30,22 +30,24 @@ Sample screenshot of the Excel file:
 
 ![alt text](eBayProject/src/test/resources/images/excel.jpg)
 
-Fully developed page objects:
-* Header Component - the header of the eBay page
-* Footer Component for subpages such as Cart Page - only for subpages; the footer of the main eBay page is different
+Developed page objects:
+* HeaderComponent - the header of the eBay page
+* FooterComponent - the footer for subpages such as Cart Page
 * Cart Page - eBay subpage that displays your cart
-* Item Page - small boxes displaying individual items on Search page
+* ItemListedComponent - small boxes displaying individual items on Search page
 
-Partly developed page objects that need finishing:
+
+Partly developed page objects that need finishig:
 * Main Page - main eBay page
 * Search Page - search page on eBay
-* Item Page
+* Item Page - subpage displaying an individual item to buy
 
 Ideas for future development:
-* finishing off Main Page, Search Page, Item Page objects
+* finishing off Main Page, Search Page, Item Page
 
 ### Acknowledgments
-Any problems I stumbled upon while working on the project, were solved thanks to:
+Any problems that I stumbled upon while working on the project were solved thanks to:
+* [Selenium documentation](https://seleniumhq.github.io/selenium/docs/api/java/)
 * _Selenium Testing Tools Cookbook_, Second Edition, Unmesh Gundecha
 * Youtube videos
-* Online tutorials - e.g. www.toolsqa.com, www.guru99.com
+* Online tutorials - e.g. www.toolsqa.com, www.guru99.com, https://www.seleniumeasy.com/
