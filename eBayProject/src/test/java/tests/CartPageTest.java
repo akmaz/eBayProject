@@ -105,6 +105,7 @@ public class CartPageTest extends BaseTest{
 
 		ItemPage itemPage = searchPage.clickTitleLinkInItem(0);
 		itemPage.selectItemTypeByIndex(4);
+		
 		double price = itemPage.getPrice();
 		itemPage.clickAddToCardButton();
 		
