@@ -20,9 +20,9 @@ In order to perfom the testing, run CartPageTest.java file.
 Address of a website being tested:
 https://www.ebay.com/
 
-For now, the test convers the Cart page content.
+For now, the test convers basic test cases for the Cart page content.
 
-Screenshot of a wesbite being tested:
+Screenshot of eBay page:
 
 ![alt text](eBayProject/src/test/resources/images/image1.jpg)
 
@@ -50,5 +50,5 @@ Ideas for future development:
 Any problems that I stumbled upon while working on the project were solved thanks to:
 * [Selenium documentation](https://seleniumhq.github.io/selenium/docs/api/java/)
 * _Selenium Testing Tools Cookbook_, Second Edition, Unmesh Gundecha
-* Youtube videos
 * Online tutorials - e.g. www.toolsqa.com, www.guru99.com, https://www.seleniumeasy.com/
+* Youtube videos
