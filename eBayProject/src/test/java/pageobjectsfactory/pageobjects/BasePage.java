@@ -14,6 +14,7 @@ import org.testng.Assert;
  * @author aleks
  *
  */
+
 public class BasePage {
 	
 	protected WebDriver driver;
@@ -63,14 +64,14 @@ public class BasePage {
 		Assert.assertEquals(x, y);	
 	}
 	
-	public void assertCorrectUrl(String url) {
+	public void assertUrl(String url) {
 		
-		Assert.assertEquals(driver.getCurrentUrl(), url);
+		Assert.assertEquals(getUrl(), url);
 	}
 	
 	public void assertUrlContains(String text) {
 		
-		Assert.assertTrue(driver.getCurrentUrl().contains(text));
+		Assert.assertTrue(getUrl().contains(text));
 	}
 	
 	public void assertCorrectTitle(String title) {
@@ -90,4 +91,6 @@ public class BasePage {
 		return driver.getCurrentUrl();
 	}
 
+
+	
 }

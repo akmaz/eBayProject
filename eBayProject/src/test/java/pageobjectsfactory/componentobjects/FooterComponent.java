@@ -7,13 +7,13 @@ import org.openqa.selenium.support.FindBy;
 import pageobjectsfactory.pageobjects.BasePage;
 
 /**
- * Class represents a component object - Footer on subpages, such as on Cart subpage
+ * Class represents a component object - Footer on subpages (such as on Cart subpage)
  * 
  * @author aleks
  *
  */
 
-public class FooterObject extends BasePage {
+public class FooterComponent extends BasePage {
 	
 	@FindBy(xpath = "//li[@class='gf-li']/a[text() = 'About eBay']")
 	private WebElement abouteBayLink;
@@ -67,7 +67,7 @@ public class FooterObject extends BasePage {
 	private WebElement arrowButton;
 	
 	
-	public FooterObject(WebDriver driver) {
+	public FooterComponent(WebDriver driver) {
 		super(driver);
 
 	}

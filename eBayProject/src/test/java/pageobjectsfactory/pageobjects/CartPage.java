@@ -1,13 +1,16 @@
 package pageobjectsfactory.pageobjects;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import pageobjectsfactory.componentobjects.FooterObject;
-import pageobjectsfactory.componentobjects.HeaderObject;
+import pageobjectsfactory.componentobjects.FooterComponent;
+import pageobjectsfactory.componentobjects.HeaderComponent;
+import pageobjectsfactory.componentobjects.ItemInCartComponent;
 
 /**
  * Class represents a page object - Cart page
@@ -21,8 +24,11 @@ public class CartPage extends BasePage {
 	private static final String URL = "https://cart.ebay.com/";
 	private static final String PAGE_TITLE = "Shopping cart";
 	
-	private HeaderObject header;
-	private FooterObject footer;
+	private HeaderComponent header;
+	private FooterComponent footer;
+	
+	private List<ItemInCartComponent> itemsInCart;
+	private By itemsInCartLocator = By.xpath("//div[@data-test-id='cart-bucket']");
 	
 	@FindBy(xpath = "//a[@data-test-id='start-shopping']")
 	private WebElement startShoppingButton;
@@ -40,24 +46,50 @@ public class CartPage extends BasePage {
 	public CartPage(WebDriver driver) {
 		super(driver);
 		
-		header = new HeaderObject(driver);
-		footer = new FooterObject(driver);
+		header = new HeaderComponent(driver);
+		footer = new FooterComponent(driver);
+		
+		locateItemsInCart();
 	}
 	
 	public void openCardPage() {
 		driver.get(URL);
 	}
 	
+	public void locateItemsInCart() {
+		List<WebElement> itemsInCartElements = driver.findElements(itemsInCartLocator);
+		itemsInCart = new ArrayList<ItemInCartComponent>();
+		
+		if(itemsInCartElements.size()!=0) {
+			for(int i=0; i<itemsInCartElements.size() ; i++) {
+				ItemInCartComponent itemInCart = new ItemInCartComponent(driver);
+				itemInCart.setItem(itemsInCartElements.get(i));
+				itemsInCart.add(itemInCart);
+			}
+		}
+	}
+	
+
+	public ItemInCartComponent getItem(int index) {
+		return itemsInCart.get(index);
+	}
+
+	
 	public void assertTitle() {
 		assertEquals(PAGE_TITLE, getTitle());
 	}
 	
 	public void assertUrl() {
-		assertEquals(URL, getUrl());
+		assertUrl(URL);
+
 	}
 	
-	public HeaderObject getHeader() {
+	public HeaderComponent getHeader() {
 		return header;
+	}
+	
+	public FooterComponent getFooter() {
+		return footer;
 	}
 	
 	public MainPage clickStartShoppingButton() {

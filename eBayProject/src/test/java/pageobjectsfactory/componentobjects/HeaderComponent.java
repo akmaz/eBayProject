@@ -14,7 +14,7 @@ import pageobjectsfactory.pageobjects.SearchPage;
  *
  */
 
-public class HeaderObject extends BasePage{
+public class HeaderComponent extends BasePage{
 	
 	
 	@FindBy(xpath="//span[@id='gh-ug']/a")
@@ -66,7 +66,7 @@ public class HeaderObject extends BasePage{
 	private WebElement advancedLink;
 	
 	
-	public HeaderObject(WebDriver driver) {
+	public HeaderComponent(WebDriver driver) {
 		super(driver);
 		
 	}

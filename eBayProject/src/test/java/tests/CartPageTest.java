@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pageobjectsfactory.pageobjects.CartPage;
@@ -28,7 +29,7 @@ public class CartPageTest extends BaseTest{
 	 */
 	
 	@Test
-	public void openAndAssertCartPage() {
+	public void unloggedViewAndAssertCartPage() {
 		
 		MainPage mainPage = new MainPage(driver);
 		mainPage.openMainPage();
@@ -49,7 +50,7 @@ public class CartPageTest extends BaseTest{
 	 */
 	
 	@Test
-	public void unloggedViewShoppingCard() {
+	public void unloggedViewCartPageCheckIfEmpty() {
 		
 		MainPage mainPage = new MainPage(driver);
 		mainPage.openMainPage();
@@ -63,7 +64,7 @@ public class CartPageTest extends BaseTest{
 	 * TC003
 	 * 
 	 * Method navigates to the Cart page from the Main page, and clicks on the 'Start shopping' link,
-	 * and verifies if it brings user to the Main page again
+	 * and verifies if it brings user to the correct page
 	 * 
 	 * @param no args
 	 * @return void
@@ -87,6 +88,7 @@ public class CartPageTest extends BaseTest{
 	 * 
 	 * Method searches for any item and adds one item to the cart,
 	 * then navigates to the cart and verifies if it displays the correct price
+	 * and click to remove the item
 	 * 
 	 * @param no args
 	 * @return void
@@ -103,12 +105,14 @@ public class CartPageTest extends BaseTest{
 
 		ItemPage itemPage = searchPage.clickTitleLinkInItem(0);
 		itemPage.selectItemTypeByIndex(4);
-		System.out.println(itemPage.getPrice());
+		double price = itemPage.getPrice();
 		itemPage.clickAddToCardButton();
 		
-		
-		
-	}
+		CartPage cartPage = itemPage.clickGoToCart();
+		Assert.assertEquals(cartPage.getItem(0).getPrice(),price);
 
+		cartPage.getItem(0).removeItem();
+	}
+	
 
 }

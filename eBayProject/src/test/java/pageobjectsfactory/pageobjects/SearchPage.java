@@ -6,35 +6,42 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import pageobjectsfactory.componentobjects.FooterObject;
-import pageobjectsfactory.componentobjects.HeaderObject;
-import pageobjectsfactory.componentobjects.ItemListedObject;
+import pageobjectsfactory.componentobjects.FooterComponent;
+import pageobjectsfactory.componentobjects.HeaderComponent;
+import pageobjectsfactory.componentobjects.ItemListedComponent;
+
+/**
+ * Class represents a page object - search page on eBay
+ * 
+ * @author aleks
+ *
+ */
 
 public class SearchPage extends BasePage {
 
 	private static final String PART_OF_PAGE_TITLE = " | eBay";
 	
-	private HeaderObject header;
-	private FooterObject footer;
+	private HeaderComponent header;
+	private FooterComponent footer;
 	
 	private By itemsListedBy = By.xpath("//li[contains(@id,'srp-river-results-listing')]");
 	
-	private List<ItemListedObject> itemsListed;
+	private List<ItemListedComponent> itemsListed;
 	
 	public SearchPage(WebDriver driver) {
 		super(driver);
 		
-		header = new HeaderObject(driver);
-		footer = new FooterObject(driver);
+		header = new HeaderComponent(driver);
+		footer = new FooterComponent(driver);
 		
 		locateItems();
 	}
 	
 	private void locateItems() {
-		itemsListed = new ArrayList<ItemListedObject>();
+		itemsListed = new ArrayList<ItemListedComponent>();
 		
 		for(int i=0; i<driver.findElements(itemsListedBy).size(); i++) {
-			ItemListedObject item = new ItemListedObject(driver);
+			ItemListedComponent item = new ItemListedComponent(driver);
 			item.setItem(driver.findElements(itemsListedBy).get(i));
 			itemsListed.add(item);
 		}
@@ -53,7 +60,16 @@ public class SearchPage extends BasePage {
 		return new ItemPage(driver);
 	}
 
-	public ItemListedObject getItem(int indexOfElement) {
+	public ItemListedComponent getItem(int indexOfElement) {
 		return itemsListed.get(indexOfElement);
 	}
+	
+	public HeaderComponent getHeader() {
+		return header;
+	}
+	
+	public FooterComponent getFooter() {
+		return footer;
+	}
+
 }
