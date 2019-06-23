@@ -6,7 +6,14 @@ import org.openqa.selenium.WebElement;
 
 import pageobjectsfactory.pageobjects.BasePage;
 
-public class ItemListedObject extends BasePage{
+/**
+ * Class represents a component object - an item listed on the Search page
+ * 
+ * @author aleks
+ *
+ */
+
+public class ItemListedComponent extends BasePage {
 	
 	protected By image = By.xpath("//div[@class='s-item__image-section']/a[@href]");
 	
@@ -24,10 +31,9 @@ public class ItemListedObject extends BasePage{
 	
 	protected By numberSold = By.xpath("//div[contains(@class,'s-item__info')]//span[@class='s-item__hotness']/span[@class='BOLD NEGATIVE']");  
 	
-	
 	private WebElement item;
 	
-	public ItemListedObject(WebDriver driver){
+	public ItemListedComponent(WebDriver driver){
 		super(driver);
 	}
 	
