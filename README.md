@@ -8,7 +8,7 @@ To run the project, you will need:
 * Eclipse - you can download [here](https://www.eclipse.org/downloads/packages/).
 * Maven integration for Eclipse.
 * TestNG - you can download 'TestNG for Eclipse' plug-in from Eclipse Marketplace.
-* Chrome Driver - It's already added to the project in the src/test/resources/drivers folder.
+* Chrome Driver - version used: Chrome 75. Driver is already added to the project in the src/test/resources/drivers folder.
 
 Maven uses the below dependencies:
 * Selenium WebDriver - used version 3.141.59.
@@ -27,9 +27,25 @@ Screenshot of a wesbite being tested:
 ![alt text](eBayProject/src/test/resources/images/image1.jpg)
 
 Sample screenshot of the Excel file:
+
 ![alt text](eBayProject/src/test/resources/images/excel.jpg)
 
+Fully developed page objects:
+* Header Component - the header of the eBay page
+* Footer Component for subpages such as Cart Page - only for subpages; the footer of the main eBay page is different
+* Cart Page - eBay subpage that displays your cart
+* Item Page - small boxes displaying individual items on Search page
+
+Partly developed page objects that need finishing:
+* Main Page - main eBay page
+* Search Page - search page on eBay
+* Item Page
+
+Ideas for future development:
+* finishing off Main Page, Search Page, Item Page objects
+
 ### Acknowledgments
+Any problems I stumbled upon while working on the project, were solved thanks to:
 * _Selenium Testing Tools Cookbook_, Second Edition, Unmesh Gundecha
 * Youtube videos
 * Online tutorials - e.g. www.toolsqa.com, www.guru99.com
