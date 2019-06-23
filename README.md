@@ -28,7 +28,7 @@ Screenshot of eBay page:
 
 Sample screenshot of the Excel file:
 
-![alt text](eBayProject/src/test/resources/images/excel.jpg)
+![alt text](eBayProject/src/test/resources/images/excel1.jpg)
 
 Developed page/component objects:
 * Header Component - the header of the eBay page
