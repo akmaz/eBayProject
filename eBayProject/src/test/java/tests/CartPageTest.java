@@ -1,8 +1,11 @@
 package tests;
 
+import java.util.Set;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import pageobjectsfactory.pageobjects.CartFeedbackPage;
 import pageobjectsfactory.pageobjects.CartPage;
 import pageobjectsfactory.pageobjects.ItemPage;
 import pageobjectsfactory.pageobjects.MainPage;
@@ -86,6 +89,39 @@ public class CartPageTest extends BaseTest{
 	/**
 	 * TC004
 	 * 
+	 * Opens Cart page on its own, clicks on the 'Send Us Your Comments' link,
+	 * verifies if it brings user to the correct page, and fills in a feedback form
+	 * 
+	 * @param no args
+	 * @return void
+	 */
+	
+	@Test
+	public void unloggedEmptyCartSendUsYourComments() {
+		
+		CartPage cartPage = new CartPage(driver);
+		cartPage.openCardPage();
+		String w1 = driver.getWindowHandle();
+		CartFeedbackPage cartFeedbackPage = cartPage.clickSendUsYourCommentsLink();
+		
+		Set<String> windows = driver.getWindowHandles();
+		for(String window : windows) {
+			driver.switchTo().window(window);
+			if(window.equals(w1))
+				driver.close();
+		}
+		
+		cartFeedbackPage.assertTitle();
+		cartFeedbackPage.assertUrl();
+		cartFeedbackPage.setChoice("love");
+		cartFeedbackPage.writeIntoTellUsMoreBox("Sample text... Hello!");
+		cartFeedbackPage.clickSendButton();
+		
+	}
+	
+	/**
+	 * TC005
+	 * 
 	 * Method searches for any item and adds one item to the cart,
 	 * then navigates to the cart and verifies if it displays the correct price
 	 * and click to remove the item
@@ -113,6 +149,7 @@ public class CartPageTest extends BaseTest{
 		Assert.assertEquals(cartPage.getItem(0).getPrice(),price);
 
 		cartPage.getItem(0).removeItem();
+		cartPage.checkItemRemoved();
 	}
 	
 
