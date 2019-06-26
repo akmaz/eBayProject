@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 import pageobjectsfactory.componentobjects.FooterComponent;
 import pageobjectsfactory.componentobjects.HeaderComponent;
@@ -21,7 +22,7 @@ import pageobjectsfactory.componentobjects.ItemInCartComponent;
 
 public class CartPage extends BasePage {
 
-	private static final String URL = "https://cart.ebay.com/";
+	private static final String URL = "https://cart.payments.ebay.com/";
 	private static final String PAGE_TITLE = "Shopping cart";
 	
 	private HeaderComponent header;
@@ -29,6 +30,7 @@ public class CartPage extends BasePage {
 	
 	private List<ItemInCartComponent> itemsInCart;
 	private By itemsInCartLocator = By.xpath("//div[@data-test-id='cart-bucket']");
+	private By pageAlertLocator = By.xpath("//div[@data-test-id='page-alerts']/div");
 	
 	@FindBy(xpath = "//a[@data-test-id='start-shopping']")
 	private WebElement startShoppingButton;
@@ -102,12 +104,20 @@ public class CartPage extends BasePage {
 		click(signInButton);
 	}
 	
-	public void clickSendUsYourCommentsLink() {
+	public CartFeedbackPage clickSendUsYourCommentsLink() {
 		click(sendUsYourCommentsLink);
+		
+		return new CartFeedbackPage(driver);
 	}
 	
 	public void checkIfCartEmpty() {
 		assertEquals(1, emptyCard.size());
+	}
+	
+	public void checkItemRemoved() {
+		int num = driver.findElements(pageAlertLocator).size();
+		
+		Assert.assertEquals(num, 1);
 	}
 
 }

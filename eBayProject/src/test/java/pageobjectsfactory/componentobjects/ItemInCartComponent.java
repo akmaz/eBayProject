@@ -3,6 +3,7 @@ package pageobjectsfactory.componentobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import pageobjectsfactory.pageobjects.BasePage;
 
@@ -44,5 +45,6 @@ public class ItemInCartComponent extends BasePage {
 	
 	public void removeItem() {
 		click(driver.findElement(removeLinkLocator));
+		
 	}
 }

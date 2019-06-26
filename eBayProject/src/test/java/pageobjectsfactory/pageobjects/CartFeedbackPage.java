@@ -15,9 +15,14 @@ import org.openqa.selenium.WebElement;
 
 public class CartFeedbackPage extends BasePage {
 	
+	private static final String URL_NOT_COMPLETE = "https://connect.ebay.com/srv/survey/";
+	private static final String PAGE_TITLE = "Cart feedback";
+	
+	
 	private By eBayIconLocator = By.xpath("//a[@id='gh-la']");
 	
-	private By radioChoicesLocator = By.xpath("//div[@class='choices radios']//div[@class='field']//input[@type='radio']");
+	private By radioChoicesLocator = By.xpath("//*[@id='q0']//fieldset[1]/div[@class='field']");
+			//By.xpath("//form[@id='theSurvey']//fieldset[@class='sr-fieldset branch-margin']//div[@class='field']");
 	private List<WebElement> radioChoices;
 	private By tellUsMoreLocator = By.xpath("//textarea[@id='qid_3']");
 	private By issueChoicesLocator = By.xpath("//div[@class='choices radios'][2]//div[@class='field']//input[@type='radio']");
@@ -25,12 +30,24 @@ public class CartFeedbackPage extends BasePage {
 	private By inputOtherLocator = By.xpath("//input[@id='qid_2']");
 	private By sendButtonLocator = By.xpath("//button[@id='submitFdbk']");
 	
-	private int k = -1;
 	
 	public CartFeedbackPage(WebDriver driver) {
 		super(driver);
 		
-		locateChoices();
+	}
+	
+	public void assertTitle() {
+		assertEquals(PAGE_TITLE, getTitle());
+	}
+	
+	/*
+	 * different types of surveys might have different full url,
+	 * therefore we will only validate if the beginning of the url is correct
+	 */
+	
+	public void assertUrl() {
+		assertTrue(getUrl().contains(URL_NOT_COMPLETE));
+
 	}
 	
 	public MainPage clickeBayIcon() {
@@ -41,17 +58,20 @@ public class CartFeedbackPage extends BasePage {
 	
 	private void locateChoices() {
 		radioChoices = driver.findElements(radioChoicesLocator);
+		System.out.println(radioChoices.size());
 	}
 	
 	/*
 	 * available values = love, issue, suggestion
 	 */
 	public void setChoice(String value) {
+		locateChoices();
+		
 		if(radioChoices.size()>0) {
 			for(int i=0; i<radioChoices.size(); i++) {
-				if(radioChoices.get(i).getAttribute("value").equals(value)) {
-					radioChoices.get(i).click();
-					k=i;
+				WebElement element = radioChoices.get(i).findElement(By.xpath("//input[@type='radio']"));
+				if(element.getAttribute("value").equals(value)) {
+					element.click();
 					break;
 				}
 			}
