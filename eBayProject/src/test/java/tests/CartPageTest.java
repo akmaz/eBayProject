@@ -140,10 +140,12 @@ public class CartPageTest extends BaseTest{
 		SearchPage searchPage = mainPage.getHeader().clickSearchButton();
 
 		ItemPage itemPage = searchPage.clickTitleLinkInItem(0);
-		itemPage.selectItemTypeByIndex(4);
+		itemPage.selectFeatureByIndex(1, 1);
+		itemPage.selectFeatureByIndex(2, 2);
 		
-		double price = itemPage.getPrice();
+		
 		itemPage.clickAddToCardButton();
+		double price = itemPage.getFinalPrice();
 		
 		CartPage cartPage = itemPage.clickGoToCart();
 		Assert.assertEquals(cartPage.getItem(0).getPrice(),price);
