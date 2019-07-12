@@ -15,12 +15,13 @@ import pageobjectsfactory.pageobjects.SearchPage;
 public class SearchPageTest extends BaseTest {
 	
 	private String searchedExpression = "rug";
+	private String shapeChoice = "Round";
 
 	/**
-	 * TC001
+	 * TC001 & TC002
 	 * 
 	 * Method navigates to the Main page, searches for an item 'rug',
-	 * and on the Search page selects a feature 'Shape - Round'
+	 * and on the Search page selects a feature Shape - 'Round'
 	 * 
 	 * @param no args
 	 * @return void
@@ -36,6 +37,6 @@ public class SearchPageTest extends BaseTest {
 		SearchPage searchPage = mainPage.getHeader().clickSearchButton();
 		searchPage.assertTitle();
 		
-		searchPage.getLeftBarComponent().selectShape("Round");
+		searchPage.getLeftBarComponent().selectShape(shapeChoice);
 	}
 }

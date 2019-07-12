@@ -1,41 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="122694" started-at="2019-07-12T08:33:16Z" finished-at="2019-07-12T08:35:19Z">
+  <suite name="Default suite" duration-ms="29597" started-at="2019-07-12T12:42:56Z" finished-at="2019-07-12T12:43:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="122694" started-at="2019-07-12T08:33:16Z" finished-at="2019-07-12T08:35:19Z">
-      <class name="tests.CartPageTest">
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:tests.CartPageTest@14acaea5]" name="startBrowser" is-config="true" duration-ms="7276" started-at="2019-07-12T08:33:16Z" finished-at="2019-07-12T08:33:24Z">
+    <test name="Default test" duration-ms="29597" started-at="2019-07-12T12:42:56Z" finished-at="2019-07-12T12:43:25Z">
+      <class name="tests.SearchPageTest">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:tests.SearchPageTest@14acaea5]" name="startBrowser" is-config="true" duration-ms="6205" started-at="2019-07-12T12:42:56Z" finished-at="2019-07-12T12:43:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method status="PASS" signature="unloggedAddItemToEmpyCart()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedAddItemToEmpyCart" duration-ms="82789" started-at="2019-07-12T08:33:24Z" finished-at="2019-07-12T08:34:47Z">
+        <test-method status="PASS" signature="searchForRug()[pri:0, instance:tests.SearchPageTest@14acaea5]" name="searchForRug" duration-ms="23353" started-at="2019-07-12T12:43:02Z" finished-at="2019-07-12T12:43:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- unloggedAddItemToEmpyCart -->
-        <test-method status="PASS" signature="unloggedEmptyCartSendUsYourComments()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedEmptyCartSendUsYourComments" duration-ms="9898" started-at="2019-07-12T08:34:47Z" finished-at="2019-07-12T08:34:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- unloggedEmptyCartSendUsYourComments -->
-        <test-method status="PASS" signature="unloggedEmptyCartStartShopping()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedEmptyCartStartShopping" duration-ms="10472" started-at="2019-07-12T08:34:56Z" finished-at="2019-07-12T08:35:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- unloggedEmptyCartStartShopping -->
-        <test-method status="PASS" signature="unloggedViewAndAssertCartPage()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedViewAndAssertCartPage" duration-ms="5513" started-at="2019-07-12T08:35:07Z" finished-at="2019-07-12T08:35:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- unloggedViewAndAssertCartPage -->
-        <test-method status="PASS" signature="unloggedViewCartPageCheckIfEmpty()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedViewCartPageCheckIfEmpty" duration-ms="6494" started-at="2019-07-12T08:35:12Z" finished-at="2019-07-12T08:35:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- unloggedViewCartPageCheckIfEmpty -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.CartPageTest@14acaea5]" name="closeBrowser" is-config="true" duration-ms="196" started-at="2019-07-12T08:35:19Z" finished-at="2019-07-12T08:35:19Z">
+        </test-method> <!-- searchForRug -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.SearchPageTest@14acaea5]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2019-07-12T12:43:25Z" finished-at="2019-07-12T12:43:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- tests.CartPageTest -->
+      </class> <!-- tests.SearchPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
