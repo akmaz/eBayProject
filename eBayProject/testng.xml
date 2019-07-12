@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="eBay Page test suite">
+	<test name="Suite 1">
+		<classes>
+			<class name="tests.CartPageTest" />
+			<class name="tests.SearchPageTest" />
+		
+		</classes>
+	
+	</test>
+
+</suite>
