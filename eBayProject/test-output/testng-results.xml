@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="54281" started-at="2019-06-26T22:45:46Z" finished-at="2019-06-26T22:46:40Z">
+  <suite name="Default suite" duration-ms="122694" started-at="2019-07-12T08:33:16Z" finished-at="2019-07-12T08:35:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="54281" started-at="2019-06-26T22:45:46Z" finished-at="2019-06-26T22:46:40Z">
+    <test name="Default test" duration-ms="122694" started-at="2019-07-12T08:33:16Z" finished-at="2019-07-12T08:35:19Z">
       <class name="tests.CartPageTest">
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:tests.CartPageTest@14acaea5]" name="startBrowser" is-config="true" duration-ms="4804" started-at="2019-06-26T22:45:46Z" finished-at="2019-06-26T22:45:51Z">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:tests.CartPageTest@14acaea5]" name="startBrowser" is-config="true" duration-ms="7276" started-at="2019-07-12T08:33:16Z" finished-at="2019-07-12T08:33:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method status="PASS" signature="unloggedAddItemToEmpyCart()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedAddItemToEmpyCart" duration-ms="31715" started-at="2019-06-26T22:45:51Z" finished-at="2019-06-26T22:46:23Z">
+        <test-method status="PASS" signature="unloggedAddItemToEmpyCart()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedAddItemToEmpyCart" duration-ms="82789" started-at="2019-07-12T08:33:24Z" finished-at="2019-07-12T08:34:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unloggedAddItemToEmpyCart -->
-        <test-method status="PASS" signature="unloggedEmptyCartSendUsYourComments()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedEmptyCartSendUsYourComments" duration-ms="6069" started-at="2019-06-26T22:46:23Z" finished-at="2019-06-26T22:46:29Z">
+        <test-method status="PASS" signature="unloggedEmptyCartSendUsYourComments()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedEmptyCartSendUsYourComments" duration-ms="9898" started-at="2019-07-12T08:34:47Z" finished-at="2019-07-12T08:34:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unloggedEmptyCartSendUsYourComments -->
-        <test-method status="PASS" signature="unloggedEmptyCartStartShopping()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedEmptyCartStartShopping" duration-ms="5503" started-at="2019-06-26T22:46:29Z" finished-at="2019-06-26T22:46:34Z">
+        <test-method status="PASS" signature="unloggedEmptyCartStartShopping()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedEmptyCartStartShopping" duration-ms="10472" started-at="2019-07-12T08:34:56Z" finished-at="2019-07-12T08:35:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unloggedEmptyCartStartShopping -->
-        <test-method status="PASS" signature="unloggedViewAndAssertCartPage()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedViewAndAssertCartPage" duration-ms="2961" started-at="2019-06-26T22:46:34Z" finished-at="2019-06-26T22:46:37Z">
+        <test-method status="PASS" signature="unloggedViewAndAssertCartPage()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedViewAndAssertCartPage" duration-ms="5513" started-at="2019-07-12T08:35:07Z" finished-at="2019-07-12T08:35:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unloggedViewAndAssertCartPage -->
-        <test-method status="PASS" signature="unloggedViewCartPageCheckIfEmpty()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedViewCartPageCheckIfEmpty" duration-ms="2966" started-at="2019-06-26T22:46:37Z" finished-at="2019-06-26T22:46:40Z">
+        <test-method status="PASS" signature="unloggedViewCartPageCheckIfEmpty()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedViewCartPageCheckIfEmpty" duration-ms="6494" started-at="2019-07-12T08:35:12Z" finished-at="2019-07-12T08:35:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unloggedViewCartPageCheckIfEmpty -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.CartPageTest@14acaea5]" name="closeBrowser" is-config="true" duration-ms="229" started-at="2019-06-26T22:46:40Z" finished-at="2019-06-26T22:46:40Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.CartPageTest@14acaea5]" name="closeBrowser" is-config="true" duration-ms="196" started-at="2019-07-12T08:35:19Z" finished-at="2019-07-12T08:35:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

@@ -20,16 +20,14 @@ public class CartFeedbackPage extends BasePage {
 	
 	
 	private By eBayIconLocator = By.xpath("//a[@id='gh-la']");
-	
 	private By radioChoicesLocator = By.xpath("//*[@id='q0']//fieldset[1]/div[@class='field']");
-			//By.xpath("//form[@id='theSurvey']//fieldset[@class='sr-fieldset branch-margin']//div[@class='field']");
-	private List<WebElement> radioChoices;
 	private By tellUsMoreLocator = By.xpath("//textarea[@id='qid_3']");
 	private By issueChoicesLocator = By.xpath("//div[@class='choices radios'][2]//div[@class='field']//input[@type='radio']");
-	private List<WebElement> radioIssueChoices;
 	private By inputOtherLocator = By.xpath("//input[@id='qid_2']");
 	private By sendButtonLocator = By.xpath("//button[@id='submitFdbk']");
 	
+	private List<WebElement> radioChoices;
+	private List<WebElement> radioIssueChoices;
 	
 	public CartFeedbackPage(WebDriver driver) {
 		super(driver);

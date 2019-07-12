@@ -6,8 +6,8 @@
       <class name="tests.CartPageTest">
         <methods>
           <include name="closeBrowser"/>
-          <include name="unloggedViewAndAssertCartPage"/>
           <include name="startBrowser"/>
+          <include name="unloggedAddItemToEmpyCart"/>
         </methods>
       </class> <!-- tests.CartPageTest -->
     </classes>

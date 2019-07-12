@@ -122,8 +122,8 @@ public class CartPageTest extends BaseTest{
 	/**
 	 * TC005
 	 * 
-	 * Method searches for any item and adds one item to the cart,
-	 * then navigates to the cart and verifies if it displays the correct price
+	 * Method searches for an item 'blanket' and adds the first item in the list to the cart,
+	 * then navigates to the cart and verifies if it displays the correct price as in the offer
 	 * and click to remove the item
 	 * 
 	 * @param no args
@@ -148,7 +148,7 @@ public class CartPageTest extends BaseTest{
 		double price = itemPage.getFinalPrice();
 		
 		CartPage cartPage = itemPage.clickGoToCart();
-		Assert.assertEquals(cartPage.getItem(0).getPrice(),price);
+		Assert.assertEquals(cartPage.getItem(0).getPrice(), price);
 
 		cartPage.getItem(0).removeItem();
 		cartPage.checkItemRemoved();
