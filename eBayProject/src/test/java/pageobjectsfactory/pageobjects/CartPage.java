@@ -44,7 +44,6 @@ public class CartPage extends BasePage {
 	@FindBy(xpath = "//div[@class='empty-cart']")
 	private List<WebElement> emptyCard;
 	
-		
 	public CartPage(WebDriver driver) {
 		super(driver);
 		
@@ -78,12 +77,11 @@ public class CartPage extends BasePage {
 
 	
 	public void assertTitle() {
-		assertEquals(PAGE_TITLE, getTitle());
+		assertTitle(PAGE_TITLE);
 	}
 	
 	public void assertUrl() {
 		assertUrl(URL);
-
 	}
 	
 	public HeaderComponent getHeader() {

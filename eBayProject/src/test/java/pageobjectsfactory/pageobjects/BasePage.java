@@ -80,7 +80,7 @@ public class BasePage {
 	
 	public void assertTitle(String title) {
 		
-		Assert.assertEquals(driver.getTitle(), title);
+		Assert.assertEquals(getTitle(), title);
 	}
 	
 	public void assertTrue(boolean condition) {
