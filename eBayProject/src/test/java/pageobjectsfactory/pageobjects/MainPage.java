@@ -34,7 +34,7 @@ public class MainPage extends BasePage {
 	}
 	
 	public void assertTitle() {
-		assertEquals(PAGE_TITLE, getTitle());
+		assertTitle(PAGE_TITLE);
 	}
 	
 	public void assertUrl() {

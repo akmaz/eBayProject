@@ -1,6 +1,7 @@
 package pageobjectsfactory.componentobjects;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,6 +21,7 @@ public class LeftBarComponent extends BasePage {
 	private By seeAllButtonColorLocator = By.xpath("//div[@id='w3-w2']/button");
 	
 	private List<WebElement> shapeOptions;
+	private List<WebElement> colorOptions;
 	
 	public LeftBarComponent(WebDriver driver) {
 		super(driver);
@@ -27,6 +29,10 @@ public class LeftBarComponent extends BasePage {
 	
 	private void updateShapeOptionsList() {
 		shapeOptions = driver.findElements(shapeLocator);
+	}
+	
+	private void updateColorOptionsList() {
+		colorOptions = driver.findElements(colorLocator);
 	}
 	
 	public void selectShape(int index) {
@@ -39,7 +45,7 @@ public class LeftBarComponent extends BasePage {
 	
 	public void selectShape(String value) {
 		updateShapeOptionsList();
-		
+
 		if(getShapeOption(value) != null) {
 			getShapeOption(value).click();
 		}
@@ -48,15 +54,16 @@ public class LeftBarComponent extends BasePage {
 	
 	private WebElement getShapeOption(String name) {
 		WebElement element = null;
+		int i;
 		
-		for(int i=0; i< shapeOptions.size(); i++) {
-			element = shapeOptions.get(i).findElement(By.xpath("//input"));
-			if(element.getAttribute("aria-label").equals(name)) {
+		for(i=0; i< shapeOptions.size(); i++) {
+			element = shapeOptions.get(i).findElement(By.xpath("span"));
+			if(element.getText().equals(name)) {
 				break;
 			}
 		}
 		
-		return element;
+		return shapeOptions.get(i);
 	}
 	
 	private WebElement getShapeOption(int index) {

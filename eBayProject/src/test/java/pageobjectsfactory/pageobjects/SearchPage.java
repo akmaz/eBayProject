@@ -78,5 +78,10 @@ public class SearchPage extends BasePage {
 	public LeftBarComponent getLeftBarComponent() {
 		return leftBar;
 	}
+	
+	public void assertTitle() {
+		assertTitleContains(PART_OF_PAGE_TITLE);
+	}
+	
 
 }

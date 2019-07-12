@@ -74,7 +74,11 @@ public class BasePage {
 		Assert.assertTrue(getUrl().contains(text));
 	}
 	
-	public void assertCorrectTitle(String title) {
+	public void assertTitleContains(String title) {
+		Assert.assertTrue(getTitle().contains(title));
+	}
+	
+	public void assertTitle(String title) {
 		
 		Assert.assertEquals(driver.getTitle(), title);
 	}

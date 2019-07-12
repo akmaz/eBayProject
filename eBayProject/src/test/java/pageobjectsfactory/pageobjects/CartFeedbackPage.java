@@ -35,7 +35,7 @@ public class CartFeedbackPage extends BasePage {
 	}
 	
 	public void assertTitle() {
-		assertEquals(PAGE_TITLE, getTitle());
+		assertTitle(PAGE_TITLE);
 	}
 	
 	/*
@@ -44,7 +44,7 @@ public class CartFeedbackPage extends BasePage {
 	 */
 	
 	public void assertUrl() {
-		assertTrue(getUrl().contains(URL_NOT_COMPLETE));
+		assertUrlContains(URL_NOT_COMPLETE);
 
 	}
 	
