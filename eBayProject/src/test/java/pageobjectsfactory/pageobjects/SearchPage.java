@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import pageobjectsfactory.componentobjects.FooterComponent;
 import pageobjectsfactory.componentobjects.HeaderComponent;
 import pageobjectsfactory.componentobjects.ItemListedComponent;
+import pageobjectsfactory.componentobjects.LeftBarComponent;
 
 /**
  * Class represents a page object - search page on eBay
@@ -23,8 +24,9 @@ public class SearchPage extends BasePage {
 	
 	private HeaderComponent header;
 	private FooterComponent footer;
+	private LeftBarComponent leftBar;
 	
-	private By itemsListedBy = By.xpath("//li[contains(@id,'srp-river-results-listing')]");
+	private By itemsListedLocator = By.xpath("//li[contains(@id,'srp-river-results-listing')]");
 	
 	private List<ItemListedComponent> itemsListed;
 	
@@ -33,6 +35,7 @@ public class SearchPage extends BasePage {
 		
 		header = new HeaderComponent(driver);
 		footer = new FooterComponent(driver);
+		leftBar = new LeftBarComponent(driver);
 		
 		locateItems();
 	}
@@ -40,9 +43,9 @@ public class SearchPage extends BasePage {
 	private void locateItems() {
 		itemsListed = new ArrayList<ItemListedComponent>();
 		
-		for(int i=0; i<driver.findElements(itemsListedBy).size(); i++) {
+		for(int i=0; i<driver.findElements(itemsListedLocator).size(); i++) {
 			ItemListedComponent item = new ItemListedComponent(driver);
-			item.setItem(driver.findElements(itemsListedBy).get(i));
+			item.setItem(driver.findElements(itemsListedLocator).get(i));
 			itemsListed.add(item);
 		}
 
@@ -70,6 +73,10 @@ public class SearchPage extends BasePage {
 	
 	public FooterComponent getFooter() {
 		return footer;
+	}
+	
+	public LeftBarComponent getLeftBarComponent() {
+		return leftBar;
 	}
 
 }
