@@ -15,12 +15,12 @@ Maven uses the below dependencies:
 * TestNG - used version 6.14.3.
 
 ### Running the test
-In order to perfom the testing, run CartPageTest.java file.
+In order to perfom the testing, run testng.xml file.
 
 Address of a website being tested:
 https://www.ebay.com/
 
-For now, the test convers basic test cases for the Cart page content.
+For now, the test convers basic test cases for the Cart page content and Search page content.
 
 Screenshot of eBay page:
 
@@ -36,19 +36,21 @@ Developed page/component objects:
 * Cart Page - eBay subpage that displays your cart
 * Item Listed Component - small boxes displaying individual items on Search page
 
-
 Partly developed page/component objects that need finishig:
 * Main Page - main eBay page
 * Search Page - search page on eBay
 * Item Page - subpage displaying an individual item to buy
 * Item In Cart Component - an item box on the Cart page
+* Left Bar Component - a left bar displaying different search criteria on the Search page
 
 Ideas for future development:
-* finishing off Main Page, Search Page, Item Page, Item In Cart Component
+* finishing off the current classes
+* tests that involve a logged in user
 
 ### Acknowledgments
 Any problems that I stumbled upon while working on the project were solved thanks to:
 * [Selenium documentation](https://seleniumhq.github.io/selenium/docs/api/java/)
 * _Selenium Testing Tools Cookbook_, Second Edition, Unmesh Gundecha
 * Online tutorials - e.g. www.toolsqa.com, www.guru99.com, https://www.seleniumeasy.com/
+* Stack Overflow
 * Youtube videos
