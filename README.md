@@ -36,7 +36,7 @@ Developed page/component objects:
 * Cart Page - eBay subpage that displays your cart
 * Item Listed Component - small boxes displaying individual items on Search page
 
-Partly developed page/component objects that need finishig:
+Partly developed page/component objects that need finishing:
 * Main Page - main eBay page
 * Search Page - search page on eBay
 * Item Page - subpage displaying an individual item to buy
