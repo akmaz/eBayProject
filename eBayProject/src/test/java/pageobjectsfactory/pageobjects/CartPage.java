@@ -22,8 +22,8 @@ import pageobjectsfactory.componentobjects.ItemInCartComponent;
 
 public class CartPage extends BasePage {
 
-	private static final String URL = "https://cart.payments.ebay.com/";
-	private static final String PAGE_TITLE = "Shopping cart";
+	private static final String URL = "https://cart.ebay.com/"; // "https://cart.payments.ebay.com/";
+	private static final String PAGE_TITLE = "eBay shopping cart";
 	
 	private HeaderComponent header;
 	private FooterComponent footer;

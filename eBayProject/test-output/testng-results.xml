@@ -2,50 +2,50 @@
 <testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="eBay Page test suite" duration-ms="95698" started-at="2019-07-12T13:44:55Z" finished-at="2019-07-12T13:46:30Z">
+  <suite name="eBay Page test suite" duration-ms="91076" started-at="2019-12-09T20:44:33 CET" finished-at="2019-12-09T20:46:04 CET">
     <groups>
     </groups>
-    <test name="Suite 1" duration-ms="95698" started-at="2019-07-12T13:44:55Z" finished-at="2019-07-12T13:46:30Z">
+    <test name="Suite 1" duration-ms="91076" started-at="2019-12-09T20:44:33 CET" finished-at="2019-12-09T20:46:04 CET">
       <class name="tests.CartPageTest">
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:tests.CartPageTest@14acaea5]" name="startBrowser" is-config="true" duration-ms="5878" started-at="2019-07-12T13:44:55Z" finished-at="2019-07-12T13:45:01Z">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:tests.CartPageTest@47ef968d]" name="startBrowser" is-config="true" duration-ms="11002" started-at="2019-12-09T20:44:33 CET" finished-at="2019-12-09T20:44:44 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method status="PASS" signature="unloggedAddItemToEmpyCart()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedAddItemToEmpyCart" duration-ms="41271" started-at="2019-07-12T13:45:01Z" finished-at="2019-07-12T13:45:42Z">
+        <test-method status="PASS" signature="unloggedAddItemToEmpyCart()[pri:0, instance:tests.CartPageTest@47ef968d]" name="unloggedAddItemToEmpyCart" duration-ms="30688" started-at="2019-12-09T20:44:44 CET" finished-at="2019-12-09T20:45:14 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unloggedAddItemToEmpyCart -->
-        <test-method status="PASS" signature="unloggedEmptyCartSendUsYourComments()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedEmptyCartSendUsYourComments" duration-ms="7377" started-at="2019-07-12T13:45:42Z" finished-at="2019-07-12T13:45:49Z">
+        <test-method status="PASS" signature="unloggedEmptyCartSendUsYourComments()[pri:0, instance:tests.CartPageTest@47ef968d]" name="unloggedEmptyCartSendUsYourComments" duration-ms="7509" started-at="2019-12-09T20:45:14 CET" finished-at="2019-12-09T20:45:22 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unloggedEmptyCartSendUsYourComments -->
-        <test-method status="PASS" signature="unloggedEmptyCartStartShopping()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedEmptyCartStartShopping" duration-ms="8111" started-at="2019-07-12T13:45:49Z" finished-at="2019-07-12T13:45:57Z">
+        <test-method status="PASS" signature="unloggedEmptyCartStartShopping()[pri:0, instance:tests.CartPageTest@47ef968d]" name="unloggedEmptyCartStartShopping" duration-ms="6569" started-at="2019-12-09T20:45:22 CET" finished-at="2019-12-09T20:45:28 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unloggedEmptyCartStartShopping -->
-        <test-method status="PASS" signature="unloggedViewAndAssertCartPage()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedViewAndAssertCartPage" duration-ms="3104" started-at="2019-07-12T13:45:57Z" finished-at="2019-07-12T13:46:00Z">
+        <test-method status="PASS" signature="unloggedViewAndAssertCartPage()[pri:0, instance:tests.CartPageTest@47ef968d]" name="unloggedViewAndAssertCartPage" duration-ms="5297" started-at="2019-12-09T20:45:28 CET" finished-at="2019-12-09T20:45:34 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unloggedViewAndAssertCartPage -->
-        <test-method status="PASS" signature="unloggedViewCartPageCheckIfEmpty()[pri:0, instance:tests.CartPageTest@14acaea5]" name="unloggedViewCartPageCheckIfEmpty" duration-ms="2873" started-at="2019-07-12T13:46:00Z" finished-at="2019-07-12T13:46:03Z">
+        <test-method status="PASS" signature="unloggedViewCartPageCheckIfEmpty()[pri:0, instance:tests.CartPageTest@47ef968d]" name="unloggedViewCartPageCheckIfEmpty" duration-ms="3133" started-at="2019-12-09T20:45:34 CET" finished-at="2019-12-09T20:45:37 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unloggedViewCartPageCheckIfEmpty -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.CartPageTest@14acaea5]" name="closeBrowser" is-config="true" duration-ms="133" started-at="2019-07-12T13:46:03Z" finished-at="2019-07-12T13:46:03Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.CartPageTest@47ef968d]" name="closeBrowser" is-config="true" duration-ms="162" started-at="2019-12-09T20:45:37 CET" finished-at="2019-12-09T20:45:37 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- tests.CartPageTest -->
       <class name="tests.SearchPageTest">
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:tests.SearchPageTest@46d56d67]" name="startBrowser" is-config="true" duration-ms="4002" started-at="2019-07-12T13:46:03Z" finished-at="2019-07-12T13:46:07Z">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:tests.SearchPageTest@23e028a9]" name="startBrowser" is-config="true" duration-ms="9433" started-at="2019-12-09T20:45:37 CET" finished-at="2019-12-09T20:45:46 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method status="PASS" signature="searchForRug()[pri:0, instance:tests.SearchPageTest@46d56d67]" name="searchForRug" duration-ms="20744" started-at="2019-07-12T13:46:07Z" finished-at="2019-07-12T13:46:28Z">
+        <test-method status="PASS" signature="searchForRug()[pri:0, instance:tests.SearchPageTest@23e028a9]" name="searchForRug" duration-ms="16885" started-at="2019-12-09T20:45:46 CET" finished-at="2019-12-09T20:46:03 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchForRug -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.SearchPageTest@46d56d67]" name="closeBrowser" is-config="true" duration-ms="2163" started-at="2019-07-12T13:46:28Z" finished-at="2019-07-12T13:46:30Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.SearchPageTest@23e028a9]" name="closeBrowser" is-config="true" duration-ms="330" started-at="2019-12-09T20:46:03 CET" finished-at="2019-12-09T20:46:04 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

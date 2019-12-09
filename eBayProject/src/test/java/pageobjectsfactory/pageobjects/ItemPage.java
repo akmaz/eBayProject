@@ -60,7 +60,7 @@ public class ItemPage extends BasePage {
 	}
 	
 	public void selectFeatureByIndex(int featureNumber, int index) {
-		if((featureNumber-1) <= numberOfFeatures) {
+		if(featureNumber <= numberOfFeatures) {
 			System.out.println(".......");
 			Select itemTypes = new Select(selectableFeatures.get(featureNumber-1));
 			itemTypes.selectByIndex(index);

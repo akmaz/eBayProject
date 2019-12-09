@@ -44,7 +44,7 @@ public class HeaderComponent extends BasePage{
 	@FindBy(xpath="//li[@id='gh-eb-Alerts']")
 	private WebElement bellIcon;
 	
-	@FindBy(xpath="//li[@id='gh-cart']")
+	@FindBy(xpath="//li[@id='gh-minicart-hover']")//gh-cart
 	private WebElement cartIcon;
 	
 	@FindBy(xpath="//a[@id='gh-la']")

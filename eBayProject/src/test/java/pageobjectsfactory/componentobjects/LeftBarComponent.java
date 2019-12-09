@@ -57,7 +57,8 @@ public class LeftBarComponent extends BasePage {
 		int i;
 		
 		for(i=0; i< shapeOptions.size(); i++) {
-			element = shapeOptions.get(i).findElement(By.xpath("span"));
+			System.out.println(shapeOptions.get(i).getAttribute("class"));
+			element = shapeOptions.get(i).findElement(By.xpath("div//span"));
 			if(read(element).equals(name)) {
 				break;
 			}
