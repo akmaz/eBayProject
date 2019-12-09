@@ -24,7 +24,7 @@ public class BaseTest {
 		/*
 		 * if needed, change to a different driver for Mac or Linux
 		 */
-		System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/ChromeDriver/chromedriver_win32/driver.exe");
+		System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/ChromeDriver/chromedriver_win32/chromedriver.exe");
 		
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
