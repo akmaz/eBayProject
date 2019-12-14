@@ -5,21 +5,10 @@
     <classes>
       <class name="tests.CartPageTest">
         <methods>
-          <include name="unloggedViewCartPageCheckIfEmpty"/>
-          <include name="unloggedEmptyCartStartShopping"/>
-          <include name="closeBrowser"/>
-          <include name="unloggedViewAndAssertCartPage"/>
           <include name="startBrowser"/>
           <include name="unloggedAddItemToEmpyCart"/>
         </methods>
       </class> <!-- tests.CartPageTest -->
-      <class name="tests.SearchPageTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="startBrowser"/>
-          <include name="searchForRug"/>
-        </methods>
-      </class> <!-- tests.SearchPageTest -->
     </classes>
   </test> <!-- Suite 1(failed) -->
 </suite> <!-- Failed suite [eBay Page test suite] -->

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-eBay_Page_test_suite">
-              <span class="suite-name border-passed">eBay Page test suite</span>
+              <span class="suite-name border-failed">eBay Page test suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-eBay_Page_test_suite" class="hide-methods failed suite-eBay_Page_test_suite"> (hide)</a> <!-- hide-methods failed suite-eBay_Page_test_suite -->
+                      <a href="#" panel-name="suite-eBay_Page_test_suite" class="show-methods failed suite-eBay_Page_test_suite"> (show)</a> <!-- show-methods failed suite-eBay_Page_test_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-eBay_Page_test_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-eBay_Page_test_suite" title="tests.CartPageTest" hash-for-method="unloggedAddItemToEmpyCart">unloggedAddItemToEmpyCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-eBay_Page_test_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,11 +117,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-eBay_Page_test_suite" title="tests.SearchPageTest" hash-for-method="searchForRug">searchForRug</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-eBay_Page_test_suite" title="tests.CartPageTest" hash-for-method="unloggedAddItemToEmpyCart">unloggedAddItemToEmpyCart</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -142,9 +151,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-eBay_Page_test_suite" class="panel eBay_Page_test_suite">
-          <div class="suite-eBay_Page_test_suite-class-passed">
+          <div class="suite-eBay_Page_test_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">tests.CartPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -153,8 +162,29 @@
                   <a name="unloggedAddItemToEmpyCart">
                   </a> <!-- unloggedAddItemToEmpyCart -->
                   <span class="method-name">unloggedAddItemToEmpyCart</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.xpath: //div[@class=&apos;app-atc-layer-redesign-content-wrapper &apos;] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-P2734B8&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\aleks\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51935}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ff9957d5ce9abfbe35b371e25de73ba5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageobjectsfactory.pageobjects.ItemPage.getFinalPrice(ItemPage.java:78)
+	at tests.CartPageTest.unloggedAddItemToEmpyCart(CartPageTest.java:148)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-eBay_Page_test_suite-class-failed -->
+          <div class="suite-eBay_Page_test_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.CartPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="unloggedEmptyCartSendUsYourComments">
@@ -257,27 +287,27 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'unloggedAddItemToEmpyCart')
 data.setCell(0, 2, 'tests.CartPageTest')
-data.setCell(0, 3, 30688);
+data.setCell(0, 3, 63866);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'searchForRug')
 data.setCell(1, 2, 'tests.SearchPageTest')
-data.setCell(1, 3, 16885);
+data.setCell(1, 3, 20982);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'unloggedEmptyCartSendUsYourComments')
 data.setCell(2, 2, 'tests.CartPageTest')
-data.setCell(2, 3, 7509);
+data.setCell(2, 3, 13404);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'unloggedEmptyCartStartShopping')
 data.setCell(3, 2, 'tests.CartPageTest')
-data.setCell(3, 3, 6569);
+data.setCell(3, 3, 9672);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'unloggedViewAndAssertCartPage')
 data.setCell(4, 2, 'tests.CartPageTest')
-data.setCell(4, 3, 5297);
+data.setCell(4, 3, 5033);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'unloggedViewCartPageCheckIfEmpty')
 data.setCell(5, 2, 'tests.CartPageTest')
-data.setCell(5, 3, 3133);
+data.setCell(5, 3, 4359);
 window.suiteTableData['eBay_Page_test_suite']= { tableData: data, tableDiv: 'times-div-eBay_Page_test_suite'}
 return data;
 }
@@ -314,44 +344,38 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">unloggedAddItemToEmpyCart</span>
-                <span class="method-start">11022 ms</span>
+                <span class="method-start">10865 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">unloggedEmptyCartSendUsYourComments</span>
-                <span class="method-start">41715 ms</span>
+                <span class="method-start">74738 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">unloggedEmptyCartStartShopping</span>
-                <span class="method-start">49226 ms</span>
+                <span class="method-start">88147 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">unloggedViewAndAssertCartPage</span>
-                <span class="method-start">55797 ms</span>
+                <span class="method-start">97822 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">unloggedViewCartPageCheckIfEmpty</span>
-                <span class="method-start">61096 ms</span>
+                <span class="method-start">102856 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">64231 ms</span>
-              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.SearchPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">startBrowser</span>
-                <span class="method-start">64396 ms</span>
+                <span class="method-start">107221 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">searchForRug</span>
-                <span class="method-start">73829 ms</span>
+                <span class="method-start">116650 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">90716 ms</span>
-              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

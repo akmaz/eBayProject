@@ -1,54 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="1" ignored="0" total="6" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="eBay Page test suite" duration-ms="91076" started-at="2019-12-09T20:44:33 CET" finished-at="2019-12-09T20:46:04 CET">
+  <suite name="eBay Page test suite" duration-ms="137671" started-at="2019-12-10T19:58:04 CET" finished-at="2019-12-10T20:00:22 CET">
     <groups>
     </groups>
-    <test name="Suite 1" duration-ms="91076" started-at="2019-12-09T20:44:33 CET" finished-at="2019-12-09T20:46:04 CET">
+    <test name="Suite 1" duration-ms="137671" started-at="2019-12-10T19:58:04 CET" finished-at="2019-12-10T20:00:22 CET">
       <class name="tests.CartPageTest">
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:tests.CartPageTest@47ef968d]" name="startBrowser" is-config="true" duration-ms="11002" started-at="2019-12-09T20:44:33 CET" finished-at="2019-12-09T20:44:44 CET">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:tests.CartPageTest@5bc79255]" name="startBrowser" is-config="true" duration-ms="10848" started-at="2019-12-10T19:58:04 CET" finished-at="2019-12-10T19:58:15 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method status="PASS" signature="unloggedAddItemToEmpyCart()[pri:0, instance:tests.CartPageTest@47ef968d]" name="unloggedAddItemToEmpyCart" duration-ms="30688" started-at="2019-12-09T20:44:44 CET" finished-at="2019-12-09T20:45:14 CET">
+        <test-method status="FAIL" signature="unloggedAddItemToEmpyCart()[pri:0, instance:tests.CartPageTest@5bc79255]" name="unloggedAddItemToEmpyCart" duration-ms="63866" started-at="2019-12-10T19:58:15 CET" finished-at="2019-12-10T19:59:19 CET">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for presence of any elements located by By.xpath: //div[@class='app-atc-layer-redesign-content-wrapper '] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-P2734B8', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\aleks\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51935}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ff9957d5ce9abfbe35b371e25de73ba5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of any elements located by By.xpath: //div[@class='app-atc-layer-redesign-content-wrapper '] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-P2734B8', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\aleks\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51935}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ff9957d5ce9abfbe35b371e25de73ba5
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at pageobjectsfactory.pageobjects.ItemPage.getFinalPrice(ItemPage.java:78)
+at tests.CartPageTest.unloggedAddItemToEmpyCart(CartPageTest.java:148)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unloggedAddItemToEmpyCart -->
-        <test-method status="PASS" signature="unloggedEmptyCartSendUsYourComments()[pri:0, instance:tests.CartPageTest@47ef968d]" name="unloggedEmptyCartSendUsYourComments" duration-ms="7509" started-at="2019-12-09T20:45:14 CET" finished-at="2019-12-09T20:45:22 CET">
+        <test-method status="PASS" signature="unloggedEmptyCartSendUsYourComments()[pri:0, instance:tests.CartPageTest@5bc79255]" name="unloggedEmptyCartSendUsYourComments" duration-ms="13404" started-at="2019-12-10T19:59:19 CET" finished-at="2019-12-10T19:59:32 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unloggedEmptyCartSendUsYourComments -->
-        <test-method status="PASS" signature="unloggedEmptyCartStartShopping()[pri:0, instance:tests.CartPageTest@47ef968d]" name="unloggedEmptyCartStartShopping" duration-ms="6569" started-at="2019-12-09T20:45:22 CET" finished-at="2019-12-09T20:45:28 CET">
+        <test-method status="PASS" signature="unloggedEmptyCartStartShopping()[pri:0, instance:tests.CartPageTest@5bc79255]" name="unloggedEmptyCartStartShopping" duration-ms="9672" started-at="2019-12-10T19:59:32 CET" finished-at="2019-12-10T19:59:42 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unloggedEmptyCartStartShopping -->
-        <test-method status="PASS" signature="unloggedViewAndAssertCartPage()[pri:0, instance:tests.CartPageTest@47ef968d]" name="unloggedViewAndAssertCartPage" duration-ms="5297" started-at="2019-12-09T20:45:28 CET" finished-at="2019-12-09T20:45:34 CET">
+        <test-method status="PASS" signature="unloggedViewAndAssertCartPage()[pri:0, instance:tests.CartPageTest@5bc79255]" name="unloggedViewAndAssertCartPage" duration-ms="5033" started-at="2019-12-10T19:59:42 CET" finished-at="2019-12-10T19:59:47 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unloggedViewAndAssertCartPage -->
-        <test-method status="PASS" signature="unloggedViewCartPageCheckIfEmpty()[pri:0, instance:tests.CartPageTest@47ef968d]" name="unloggedViewCartPageCheckIfEmpty" duration-ms="3133" started-at="2019-12-09T20:45:34 CET" finished-at="2019-12-09T20:45:37 CET">
+        <test-method status="PASS" signature="unloggedViewCartPageCheckIfEmpty()[pri:0, instance:tests.CartPageTest@5bc79255]" name="unloggedViewCartPageCheckIfEmpty" duration-ms="4359" started-at="2019-12-10T19:59:47 CET" finished-at="2019-12-10T19:59:51 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unloggedViewCartPageCheckIfEmpty -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.CartPageTest@47ef968d]" name="closeBrowser" is-config="true" duration-ms="162" started-at="2019-12-09T20:45:37 CET" finished-at="2019-12-09T20:45:37 CET">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
       </class> <!-- tests.CartPageTest -->
       <class name="tests.SearchPageTest">
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:tests.SearchPageTest@23e028a9]" name="startBrowser" is-config="true" duration-ms="9433" started-at="2019-12-09T20:45:37 CET" finished-at="2019-12-09T20:45:46 CET">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:tests.SearchPageTest@47ef968d]" name="startBrowser" is-config="true" duration-ms="9428" started-at="2019-12-10T19:59:51 CET" finished-at="2019-12-10T20:00:01 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method status="PASS" signature="searchForRug()[pri:0, instance:tests.SearchPageTest@23e028a9]" name="searchForRug" duration-ms="16885" started-at="2019-12-09T20:45:46 CET" finished-at="2019-12-09T20:46:03 CET">
+        <test-method status="PASS" signature="searchForRug()[pri:0, instance:tests.SearchPageTest@47ef968d]" name="searchForRug" duration-ms="20982" started-at="2019-12-10T20:00:01 CET" finished-at="2019-12-10T20:00:22 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchForRug -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.SearchPageTest@23e028a9]" name="closeBrowser" is-config="true" duration-ms="330" started-at="2019-12-09T20:46:03 CET" finished-at="2019-12-09T20:46:04 CET">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
       </class> <!-- tests.SearchPageTest -->
     </test> <!-- Suite 1 -->
   </suite> <!-- eBay Page test suite -->
