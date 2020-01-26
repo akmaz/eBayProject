@@ -12,7 +12,7 @@ To run the project, you will need:
 
 Maven uses the below dependencies:
 * Selenium WebDriver - used version 3.141.59.
-* TestNG - used version 6.14.3.
+* TestNG - used version 7.0.0.
 
 ### Running the test
 In order to perfom the testing, run the testng.xml file.
@@ -24,11 +24,11 @@ For now, the test convers basic test cases for the Cart page content and Search 
 
 Screenshot of the current version of the eBay page:
 
-![alt text](eBayProject/src/test/resources/images/image1.jpg)
+![alt text](eBayProject/src/test/resources/images/image2.jpg)
 
 Sample screenshot of the Excel file:
 
-![alt text](eBayProject/src/test/resources/images/excel1.jpg)
+![alt text](eBayProject/src/test/resources/images/excel2.jpg)
 
 Developed page/component objects:
 * Header Component - the header of the eBay page
